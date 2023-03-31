@@ -1,9 +1,8 @@
-﻿//Напишите программу, которая на вход принимает два числа и выдаёт, 
-//какое число большее, а какое меньшее.
+﻿// Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
 
-// a = 5; b = 7 -> max = 7
-// a = 2 b = 10 -> max = 10
-// a = -9 b = -3 -> max = -3
+// 2, 3, 7 -> 7
+// 44 5 78 -> 78
+// 22 3 9 -> 22
 
 Console.Write("Укажите число ");
 string value;
@@ -14,15 +13,20 @@ Console.Write("Укажите число ");
 string value2;
 value2 = Console.ReadLine();
 int numberB = Convert.ToInt32(value2);
-if (numberA < numberB)
-{
-    System.Console.WriteLine(numberB);
-}
-else
+
+Console.Write("Укажите число ");
+string value3;
+value3 = Console.ReadLine();
+int numberC = Convert.ToInt32(value3);
+if (numberB <= numberA && numberA >= numberC)
 {
     System.Console.WriteLine(numberA);
 }
-if (numberA == numberB)
+else if (numberA <= numberB && numberB >= numberC)
 {
-    System.Console.WriteLine("Числа равны");
+    System.Console.WriteLine(numberB);
+}
+if (numberA <= numberC && numberC >= numberB)
+{
+    System.Console.WriteLine(numberC);
 }
